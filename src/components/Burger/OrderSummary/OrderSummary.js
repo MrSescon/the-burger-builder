@@ -2,7 +2,7 @@ import React from 'react';
 
 import Aux from '../../../hoc/Aux';
 
-const OrderSummary = (props) => {
+const orderSummary = (props) => {
 	const ingredientSummary = Object.keys(props.ingredients).map((igKey) => {
 		return (
 			<li key={igKey}>
@@ -22,4 +22,4 @@ const OrderSummary = (props) => {
 	);
 };
 
-export default OrderSummary;
+export default orderSummary;

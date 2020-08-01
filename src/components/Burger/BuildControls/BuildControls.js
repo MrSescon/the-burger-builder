@@ -22,7 +22,7 @@ const controls = [
 	}
 ];
 
-const BuildControls = (props) => {
+const buildControls = (props) => {
 	return (
 		<div className={classes.BuildControls}>
 			<p>
@@ -44,4 +44,4 @@ const BuildControls = (props) => {
 	);
 };
 
-export default BuildControls;
+export default buildControls;
