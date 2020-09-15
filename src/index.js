@@ -18,7 +18,7 @@ const rootReducer = combineReducers({
 	order: orderReducer
 });
 
-const store = createStore(burgerBuilderReducer, composeEnhancers(applyMiddleware(thunk)));
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
 
 const app = (
 	<Provider store={store}>
