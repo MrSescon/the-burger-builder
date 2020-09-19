@@ -44,7 +44,8 @@ export const purchaseBurger = (orderData) => {
 
 export const fetchOrdersSuccess = (orders) => {
 	return {
-		type: actionTypes.FETCH_ORDERS_SUCCESS
+		type: actionTypes.FETCH_ORDERS_SUCCESS,
+		orders: orders
 	};
 };
 
