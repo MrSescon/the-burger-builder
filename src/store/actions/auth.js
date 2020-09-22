@@ -42,10 +42,32 @@ export const auth = (email, password, isSignup) => {
 			.then((response) => {
 				console.log(response);
 				dispatch(authSuccess(response.data.idToken, response.data.localId));
+				dispatch(checkAuthTimeout(response.data.expiresIn));
 			})
 			.catch((err) => {
 				console.log(err);
 				dispatch(authFail(err.response.data.error));
 			});
+	};
+};
+
+export const logout = () => {
+	return {
+		type: actionTypes.AUTH_LOGOUT
+	};
+};
+
+export const checkAuthTimeout = (expirationTime) => {
+	return (dispatch) => {
+		setTimeout(() => {
+			dispatch(logout());
+		}, expirationTime * 1000);
+	};
+};
+
+export const setAutRedirectpath = (path) => {
+	return {
+		type: actionTypes.SET_AUTH_REDIRECT_PATH,
+		path: path
 	};
 };
