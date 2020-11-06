@@ -20,8 +20,8 @@ const withErrorHandler = (WrappedComponent, axios) => {
 
 		useEffect(() => {
 			return () => {
-				axios.interceptors.request.eject(this.reqInterceptor);
-				axios.interceptors.response.eject(this.resInterceptor);
+				axios.interceptors.request.eject(reqInterceptor);
+				axios.interceptors.response.eject(resInterceptor);
 			}
 		},[reqInterceptor, resInterceptor])
 
