@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import axios from '../../axios-orders';
 
-import Aux from '../../hoc/Aux';
+import Aux from '../../hoc/Auxi';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 
 import * as actions from '../../store/actions/index';
