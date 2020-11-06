@@ -18,9 +18,11 @@ const BurgerBuilder = props => {
 
 	const [purchasing, setPurchasing] = useState(false);
 
+	const { onInitIngredients } = props;
+
 	useEffect(() => {
-		props.onInitIngredients();
-	}, [])
+		onInitIngredients();
+	}, [onInitIngredients])
 
 	
 	const purchaseHandler = () => {
